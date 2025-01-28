@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEMPORARY MAIL GENERATOR</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-base-300 h-screen flex justify-center items-center">
+    <div class="container px-8 md:px-96">
+        <div class="card w-full bg-base-100 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] border-2 border-black rounded-none">
+            <div class="card-body p-8">
+                <div class="flex flex-col items-center mb-3">
+                    <h2 class="card-title text-center">TEMPORARY MAIL GENERATOR</h2>
+                </div>
+                <div class="join">
+                    <button id="createInboxBtn"
+                        class="btn bg-base-300 join-item shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] border-2 border-black rounded-none btn-sm text-xs mb-3 flex-1">CREATE
+                        INBOX</button>
+                    <button id="checkInboxBtn"
+                        class="btn bg-base-300 join-item shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] border-2 border-black rounded-none btn-sm text-xs mb-3 flex-shrink-0"
+                        disabled>CHECK
+                        INBOX</button>
+                    <button
+                        class="btn bg-base-300 join-item shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] border-2 border-black rounded-none btn-sm text-xs mb-3 flex-shrink-0 tooltip tooltip-left uppercase"
+                        data-tip="can create 25 emails every five minutes."><i class="bi bi-info"></i></button>
+                </div>
+                <div class="join">
+                    <input id="emailInput"
+                        class="input bg-base-300 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] border-2 border-black rounded-none join-item flex-1 input-sm text-xs"
+                        placeholder="EMAIL" readonly />
+                    <button id="copyEmailBtn" onclick="copyEmail()"
+                        class="btn bg-base-300 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] border-2 border-black rounded-none join-item flex-shrink-0 btn-sm text-xs"
+                        disabled><i class="bi bi-copy"></i></button>
+                </div>
+                <div id="emails-container-wrapper"
+                    class="p-2.5 bg-base-300 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] border-2 border-black rounded-none mt-2 hidden">
+                    <div class="card bg-base-100 border-2 border-black rounded-none">
+                        <div class="card-body p-2">
+                            <div id="emails-container" class="h-80 md:h-72 overflow-y-auto"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center space-x-4 mt-6">
+                    <a href="https://www.instagram.com/m9nokuro"
+                        class="btn btn-white border-2 rounded border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+                        <i class="bi bi-instagram text-xl"></i>
+                    </a>
+                    <a href="https://github.com/RevanSP"
+                        class="btn btn-white border-2 rounded border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+                        <i class="bi bi-github text-xl"></i>
+                    </a>
+                    <a href="https://web.facebook.com/profile.php?id=100082958149027&_rdc=1&_rdr"
+                        class="btn btn-white border-2 rounded border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+                        <i class="bi bi-facebook text-xl"></i>
+                    </a>
+                </div>
+                <h3 class="text-center mt-6 font-bold">
+                    ReiivanTheOnlyOne .
+                </h3>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
