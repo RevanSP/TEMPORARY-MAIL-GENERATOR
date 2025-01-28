@@ -5,8 +5,9 @@ const path = require('path');
 const app = express();
 const tempmail = new TempMail();
 
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.use(express.json());
-app.use(express.static('public'));
 
 app.get('/api/create-basic-inbox', async (req, res) => {
   try {
